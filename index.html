@@ -104,12 +104,6 @@
                 data: covidData
             });
 
-            cases = [];
-            for (var i = 0; i < covidData.features.length; i++) {
-                cases.push(covidData.features[i].properties.casePer10k);
-            };
-            console.log(cases.sort((a, b) => a - b));
-
             // add layer
             map.addLayer({
                 'id': 'covidData-layer',
