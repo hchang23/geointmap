@@ -43,7 +43,7 @@
 
         #features {
             top: 0;
-            height: 160px;
+            height: 145px;
             margin-top: 20px;
             width: 250px;
         }
@@ -52,7 +52,7 @@
             padding: 10px;
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
             line-height: 18px;
-            height: 210px;
+            height: 180px;
             margin-bottom: 40px;
             width: 150px;
         }
@@ -113,47 +113,44 @@
                     'fill-color': [
                         'step',
                         ['get', 'casePer10k'],
-                        '#FFEDA0',   // stop_output_0
+                        '#fff875',   // stop_output_0
                         600,         // stop_input_0
-                        '#FED976',   // stop_output_1
-                        900,         // stop_input_1
-                        '#FEB24C',   // stop_output_2
-                        1100,        // stop_input_2
-                        '#FD8D3C',   // stop_output_3
-                        1300,        // stop_input_3
-                        '#FC4E2A',   // stop_output_4
-                        1500,        // stop_input_4
-                        '#E31A1C',   // stop_output_5
+                        '#ffc065',   // stop_output_1
+                        800,         // stop_input_1
+                        '#ed8f67',   // stop_output_2
+                        1000,        // stop_input_2
+                        '#c5686c',   // stop_output_3
+                        1200,        // stop_input_3
+                        '#8f4b67',   // stop_output_4
+                        1400,        // stop_input_4
+                        '#563655',   // stop_output_5
                         1700,        // stop_input_5
-                        '#BD0026',   // stop_output_6
-                        2000,        // stop_input_6
-                        "#800026"    // stop_output_7
+                        '#242036'   // stop_output_6
                     ],
                     'fill-outline-color': '#BBBBBB',
-                    'fill-opacity': 0.7,
+                    'fill-opacity': 0.8,
                 }
             });
 
             // add legend intervals and colors
             const layers = [
                 '0 - 599',
-                '600 - 899',
-                '900 - 1099',
-                '1100 - 1299',
-                '1300 - 1499',
-                '1500 - 1699',
-                '1700 - 1999',
-                '2000 and more'
+                '600 - 799',
+                '800 - 999',
+                '1000 - 1199',
+                '1200 - 1399',
+                '1400 - 1699',
+                '1700 - 2099'
+                //'2000 and more'
             ];
             const colors = [
-                '#FFEDA070',
-                '#FED97670',
-                '#FEB24C70',
-                '#FD8D3C70',
-                '#FC4E2A70',
-                '#E31A1C70',
-                '#BD002670',
-                '#80002670'
+                '#fff87580',
+                '#ffc06580',
+                '#ed8f6780',
+                '#c5686c80',
+                '#8f4b6780',
+                '#56365580',
+                '#24203680'
             ];
 
             // add legend
@@ -181,7 +178,7 @@
                 });
                 document.getElementById('text-description').innerHTML = covid.length ?
                     `<h3>${covid[0].properties.name}</h3><p><strong><em>${covid[0].properties.casePer10k}</strong>
-                        COVID cases per 10k people</em></p>` :`<p>Hover over a county!</p>`;
+                        cases per 10k people</em></p>` :`<p>Hover over a county!</p>`;
             });
         });
     }
