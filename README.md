@@ -1,1 +1,3 @@
 # geointmap
+
+This lab is practicing interactive web mapping. pop_density.html displays a choroplath map of population density in the US. Hover over a state to see its population density. index.html displays a choropleth map of the cumulative COVID cases until Oct. 25, 2021 in WA counties. Hover over a county to see its cumulative COVID cases per 10k people. It is useful to compare COVID cases between counties in the same state.
